@@ -1,0 +1,47 @@
+
+1) What is Abstract Factory Design Pattern?
+* Def Abstractpattern : The Abstract Factory Design Pattern provides a way to encapsulate 
+    a group of individual factories that have a common theme without specifying 
+    their concrete classes
+
+In simple words, we can say that the Abstract Factory is a super factory that creates other factories. 
+This Abstract Factory is also called the Factory of Factories. 
+That means the Abstract Factory design pattern provides an interface for creating families of related or 
+dependent products but leaves the actual object creation to the concrete factory classes. 
+If this is not clear at the moment, then don’t worry, we will explain this with one Real-time Example.
+
+2) Example to understand the Abstract Factory Pattern?
+We want to implement one application for showing the Car and Bike details. 
+Here, we want to show two types of bikes i.e. Regular Bikes and Sports Bikes as well as 
+we want to show the details of two types of cars i.e. Regular cars and Sports cars. 
+The point that you need to remember is a sports bike and a sports car belong to the same family called Sports. 
+Similarly, Regular Bikes and Regular Cars also belong to the same family called Regular.
+
+3) Implementing Abstract Factory Design Pattern in C#?
+
+    Let us understand each component of the Abstract Factory Design Pattern:
+    1) Abstract Products: These are going to be interfaces for creating abstract products. Here, we need to define the Operations a Product should have. In our example, it is IBike.cs and ICar.cs interfaces.
+    2) Concrete Products: These are the classes that implement the Abstract Product interface. In our example, RegularBike, SportsBike, RegularCar, and SportsCar classes are the Concrete Products.
+    3) Abstract Factory: This is going to be an interface for operations that will create Abstract Product objects. In our example, it is going to be IVehicleFactory.
+    4) Concrete Factory: These are the classes that implement the AbstractFactory interface and provide implementations for the interface methods. In our example, RegularVehicleFactory and SportsVehicleFactory are the concrete factory classes.
+    5) Client: It is the class that is going to use the Abstract Product and Abstract Factory to create a family of products. In our example, it is the Main method of the Program class.
+
+
+        Abstract Factory Components in Our Example
+        1) Client: Main Method of Program Class
+        2) Abstract Product A: IBike.cs
+        3) Abstract Product B: ICar.cs
+        4) ProductA1: RegularBike.cs
+        5) ProductB1: SportsBike.cs
+        6) ProductA2: RegularCar.cs
+        7) ProductB2: SportsCar.cs
+        8) Abstract Factory: IVehicleFactory.cs
+        9) Concrete Factory1: RegularVehicleFactory.cs
+        10) Concrete Factory2: SportsVehicleFactory.cs
+4) When to use Abstract Factory Design Pattern?
+   
+1) Abstract Factory Pattern provides an interface for creating families of related dependent objects without specifying their concrete classes.
+2) The Abstract Factory Pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.
+3) The abstract factory design pattern is merely an extension of the factory method pattern or factory pattern, which allows you to create objects without being concerned about the actual class of the object being created.
+4) Abstract means hiding some information and factory means which produces the products and pattern means a design. So, the Abstract Factory Pattern is a software design pattern that provides a way to encapsulate a group of individual factories that have a common theme.
+
